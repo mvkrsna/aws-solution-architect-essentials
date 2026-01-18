@@ -1,15 +1,22 @@
 # EC2 Essentials
 
-## Docker Installation and Setup
-
-### Install Docker
+## Package Installation
 ```bash
-sudo yum install docker
+# Install Java, Docker, and PostgreSQL
+sudo yum install java docker postgresql15 -y
 ```
 
-### Start Docker Service
+## Docker Setup
+
+### Start and Enable Docker Service
 ```bash
 sudo systemctl start docker.service
+sudo systemctl enable docker
+```
+
+### Add User to Docker Group
+```bash
+sudo usermod -aG docker $USER
 ```
 
 ### Verify Installation
