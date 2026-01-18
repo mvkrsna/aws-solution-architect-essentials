@@ -1,16 +1,29 @@
-Commands to install Docker, java and Other
+# EC2 Essentials
 
-Installation of Docker:
+## Docker Installation and Setup
+
+### Install Docker
+```bash
 sudo yum install docker
+```
 
-Starting the docker:
+### Start Docker Service
+```bash
 sudo systemctl start docker.service
+```
 
-Check the version of docker installed:
+### Verify Installation
+```bash
+# Check Docker version
 sudo docker version
 
-Check if docker can run the hello-world:
+# Test with hello-world container
 sudo docker run hello-world
+```
 
-To Install and set the nginx: ( we need to set the http port to 80 in the security configurations)
+### Run Nginx Container
+> **Note:** Configure security group to allow HTTP traffic on port 80
+
+```bash
 sudo docker run -p 80:80 nginx
+```
